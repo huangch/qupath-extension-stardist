@@ -55,7 +55,7 @@ import qupath.ext.stardist.StarDist2D;
 import qupath.ext.stardist.StarDist2D.Builder;
 
 /**
- * The Qupath Interactive Plusin implementation for Star-Dist nucleus detection.
+ * The Qupath Interactive Plugin implementation for Star-Dist nucleus detection.
  * 
  * @author C.H. Huang
  *
@@ -64,7 +64,7 @@ import qupath.ext.stardist.StarDist2D.Builder;
 public class StarDistCellNucleusDetection<T> extends AbstractInteractivePlugin<T> {
 	private static Logger logger = LoggerFactory.getLogger(StarDistCellNucleusDetection.class);
 	
-    private static final boolean COMPILE_TIME = true;
+    private static final boolean COMPILE_TIME = false;
     private static final String COMPILE_TIME_MODEL_LOCATION = "/workspace/sptx/qupath-main/qupath-extension-stand/python_backend";
 				
 	private String resultString = null;
@@ -121,6 +121,18 @@ public class StarDistCellNucleusDetection<T> extends AbstractInteractivePlugin<T
     		final FileFilter modelFileFilter = new WildcardFileFilter("*.pb");
     		File[] modelFiles = modelDir.listFiles(modelFileFilter);
 
+    		if(modelFiles == null || modelFiles.length == 0) {
+				final Alert a = new Alert(AlertType.ERROR);
+				
+				a.setTitle("Error");
+				a.setHeaderText("Something wrong in the image properties.");
+				a.setContentText("Please check the model files in folder: "+modelLocation);
+
+				a.showAndWait();
+				
+				throw new Exception("Model file folder error");
+			}
+    		
     		final List<String> modellList = new ArrayList<String>();
     		for(File f: modelFiles) {
     			modellList.add(FilenameUtils.getName(f.toString()));
