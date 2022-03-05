@@ -2,13 +2,14 @@
 
 Welcome to the StarDist extension for [QuPath](http://qupath.github.io)!
 
+UPDATE (3/5/2022): An QuPath interactive UI has been added.
+
 This adds support for running the 2D version of StarDist nucleus detection developed by Uwe Schmidt and Martin Weigert.
 
 It is intended for the (at the time of writing) not-yet-released QuPath v0.3, and remains in a not-quite-complete state.
 
 > **Note:** The implementation has changed from QuPath v0.2, and the results may not be identical.
 > One new feature is that nucleus classifications - see [the documentation](https://qupath.readthedocs.io/en/stable/docs/advanced/stardist.html) for more details.
-> **UPDATE (3/5/2022):** An QuPath interactive dialog plugin has been implemented in this folk. 
 
 ## Installing
 
