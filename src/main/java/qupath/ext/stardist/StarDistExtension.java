@@ -36,7 +36,7 @@ import qupath.lib.gui.tools.MenuTools;
  * <p>
  * UPDATE (3/5/2022): Added UI entry for StarDist Nuclei Detection
  * 
- * @author Pete Bankhead, Chao Hui Huang
+ * @author Pete Bankhead, C. H. Huang
  */
 public class StarDistExtension implements QuPathExtension, GitHubProject {
 

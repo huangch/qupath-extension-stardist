@@ -57,7 +57,7 @@ import qupath.ext.stardist.StarDist2D.Builder;
 /**
  * The Qupath Interactive Plusin implementation for Star-Dist nucleus detection.
  * 
- * @author Chao Hui Huang
+ * @author C.H. Huang
  *
  * @param <T>
  */
