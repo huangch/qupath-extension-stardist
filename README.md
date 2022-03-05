@@ -1,8 +1,9 @@
-# QuPath StarDist extension
+# QuPath StarDist extension...(and its UI)
+
+> **UPDATE (3/5/2022):** This is an fork of [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist). I added a interactive plugin for easier operation.
+> ![Here is an example. An interactive plugin can be used without using the script.](https://github.com/huangch/qupath-extension-stardist/ui_example.png?raw=true)
 
 Welcome to the StarDist extension for [QuPath](http://qupath.github.io)!
-
-UPDATE (3/5/2022): An QuPath interactive UI has been added.
 
 This adds support for running the 2D version of StarDist nucleus detection developed by Uwe Schmidt and Martin Weigert.
 
