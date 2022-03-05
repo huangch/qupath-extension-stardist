@@ -1,7 +1,12 @@
 # QuPath StarDist extension...(and its UI)
 
-> **UPDATE (3/5/2022):** This is an fork of [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist). I added a interactive plugin for easier operation.
-> ![Here is an example. An interactive plugin can be used without using the script.](https://github.com/huangch/qupath-extension-stardist/blob/main/screenshot.png?raw=true)
+This is an fork of [QuPath StarDist extension](https://github.com/qupath/qupath-extension-stardist). I added a interactive plugin for easier operation.
+![Here is an example. An interactive plugin can be used without using the script.](https://github.com/huangch/qupath-extension-stardist/blob/main/screenshot.png?raw=true)
+
+Please get the required model files from [here](https://github.com/qupath/models/tree/main/stardist) and place it at the same folder of the extension (e.g., /path/to/your/home/QuPath/v0.3/extension/), or possibly somewhere else if you compiled the QuPath with this plugin on your own.
+
+That all. For the rests please see the original README of StarDist as below.
+<br>
 
 Welcome to the StarDist extension for [QuPath](http://qupath.github.io)!
 
