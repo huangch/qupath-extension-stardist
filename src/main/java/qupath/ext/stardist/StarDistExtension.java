@@ -16,10 +16,15 @@
 
 package qupath.ext.stardist;
 
+import org.controlsfx.control.action.Action;
+
+import javafx.scene.control.Menu;
 import qupath.lib.common.Version;
+import qupath.lib.gui.ActionTools;
 import qupath.lib.gui.QuPathGUI;
 import qupath.lib.gui.extensions.GitHubProject;
 import qupath.lib.gui.extensions.QuPathExtension;
+import qupath.lib.gui.tools.MenuTools;
 
 /**
  * Install StarDist as an extension.
@@ -28,14 +33,22 @@ import qupath.lib.gui.extensions.QuPathExtension;
  * in the listed extensions of QuPath and enabling some compatibility/update checks.
  * StarDist itself is only accessible via scripting.
  * In the future, the extension may also add a UI.
+ * <p>
+ * UPDATE (3/5/2022): Added UI entry for StarDist Nuclei Detection
  * 
- * @author Pete Bankhead
+ * @author Pete Bankhead, Chao Hui Huang
  */
 public class StarDistExtension implements QuPathExtension, GitHubProject {
 
 	@Override
 	public void installExtension(QuPathGUI qupath) {
-		// Does nothing
+		final Menu menu = qupath.getMenu("Extensions", true);
+		
+		MenuTools.addMenuItems(
+				menu,
+				null,
+				qupath.createPluginAction("StarDist-based Nucleus Detection", StarDistCellNucleusDetection.class, null)
+				);		
 	}
 
 	@Override

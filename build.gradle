@@ -33,7 +33,7 @@ dependencies {
     
     shadow "io.github.qupath:qupath-gui-fx:${qupathVersion}"
     shadow "org.slf4j:slf4j-api:1.7.30"
-    
+	implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
     testImplementation "io.github.qupath:qupath-gui-fx:${qupathVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.2"
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'

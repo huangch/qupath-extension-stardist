@@ -8,6 +8,7 @@ It is intended for the (at the time of writing) not-yet-released QuPath v0.3, an
 
 > **Note:** The implementation has changed from QuPath v0.2, and the results may not be identical.
 > One new feature is that nucleus classifications - see [the documentation](https://qupath.readthedocs.io/en/stable/docs/advanced/stardist.html) for more details.
+> **UPDATE (3/5/2022):** An QuPath interactive dialog plugin has been implemented in this folk. 
 
 ## Installing
 
