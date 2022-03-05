@@ -6,9 +6,10 @@ This is an fork of [QuPath StarDist extension](https://github.com/qupath/qupath-
 Please get the required model files from [here](https://github.com/qupath/models/tree/main/stardist) and place it at the same folder of the extension (e.g., /path/to/your/home/QuPath/v0.3/extension/), or possibly somewhere else if you compiled the QuPath with this plugin on your own.
 
 That all. For the rests please see the original README of StarDist as below.
-<br>
 
-Welcome to the StarDist extension for [QuPath](http://qupath.github.io)!
+Peace!
+
+# Welcome to the StarDist extension for [QuPath](http://qupath.github.io)!
 
 This adds support for running the 2D version of StarDist nucleus detection developed by Uwe Schmidt and Martin Weigert.
 
