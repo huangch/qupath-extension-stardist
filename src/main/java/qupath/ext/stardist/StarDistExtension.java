@@ -42,12 +42,17 @@ public class StarDistExtension implements QuPathExtension, GitHubProject {
 
 	@Override
 	public void installExtension(QuPathGUI qupath) {
-		final Menu menu = qupath.getMenu("Extensions", true);
+		final Menu menu = qupath.getMenu("Extensions>StarDist", true);
+		
+		MenuTools.addMenuItems(
+				menu,
+				ActionTools.createAction(new StarDistConfiguration(qupath), "Configuration")
+				);
 		
 		MenuTools.addMenuItems(
 				menu,
 				null,
-				qupath.createPluginAction("StarDist-based Nucleus Detection", StarDistCellNucleusDetection.class, null)
+				qupath.createPluginAction("Nucleus Detection", StarDistCellNucleusDetection.class, null)
 				);		
 	}
 

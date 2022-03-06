@@ -41,8 +41,10 @@ import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javafx.beans.property.StringProperty;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import qupath.lib.gui.prefs.PathPrefs;
 import qupath.lib.images.ImageData;
 import qupath.lib.images.servers.ImageServer;
 import qupath.lib.objects.PathAnnotationObject;
@@ -66,7 +68,8 @@ public class StarDistCellNucleusDetection<T> extends AbstractInteractivePlugin<T
 	
     private static final boolean COMPILE_TIME = false;
     private static final String COMPILE_TIME_MODEL_LOCATION = "/workspace/sptx/qupath-main/qupath-extension-stand/python_backend";
-				
+    final private static StringProperty stardistLocationProperty = PathPrefs.createPersistentPreference("stardistModelLocation", null);
+	    
 	private String resultString = null;
 
 	@Override
@@ -113,8 +116,8 @@ public class StarDistCellNucleusDetection<T> extends AbstractInteractivePlugin<T
 			final String mainPathStr = URLDecoder.decode(mainPathUtf8, "UTF-8");
 			final String modelLocation = COMPILE_TIME?
 					COMPILE_TIME_MODEL_LOCATION:
-					mainPathStr.substring(System.getProperty("os.name").startsWith("Windows")? 1: 0, mainPathStr.lastIndexOf("/"));
-			
+					// mainPathStr.substring(System.getProperty("os.name").startsWith("Windows")? 1: 0, mainPathStr.lastIndexOf("/"));
+					stardistLocationProperty.get();
 			logger.info("StarDist Model Location: "+modelLocation);
 			
     		final File modelDir = new File(modelLocation);
